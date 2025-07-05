@@ -1,0 +1,180 @@
+{
+	"info": {
+		"_postman_id": "38cd478d-fc39-49b5-b38b-0e20c68ac85b",
+		"name": "simple_blog_api",
+		"description": "SImple blog api to practice how crud operation work's",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "37538497"
+	},
+	"item": [
+		{
+			"name": "home_route",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8001/api",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8001",
+					"path": [
+						"api"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "api_intro",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8001/api",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8001",
+					"path": [
+						"api"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "all_posts",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8001/posts/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8001",
+					"path": [
+						"posts",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "single_post",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8001/posts/7d17ddb8-bd57-4db2-a75a-3f31255b0bfc",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8001",
+					"path": [
+						"posts",
+						"7d17ddb8-bd57-4db2-a75a-3f31255b0bfc"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create_post",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"How to become a fullstack developer\",\r\n    \"content\": \"Who is a fullstack developer? A fullstack developer or engineer is some one who can build a software from end-to-end\",\r\n    \"author\": \"MD\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8001/posts/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8001",
+					"path": [
+						"posts",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete_post",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"Making Money As a Software Engineer\",\r\n    \"content\": \"Making money as a software engineer or a software developer can be done right and also be done wrong\",\r\n    \"author\": \"MD\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8001/posts/cd9d3c7d-5eca-48d7-9ffb-13761ef29500",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8001",
+					"path": [
+						"posts",
+						"cd9d3c7d-5eca-48d7-9ffb-13761ef29500"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "modify_single_post",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"How to become a fullstack developer PART ONE\",\r\n    \"content\": \"Who is a fullstack developer? A fullstack developer or engineer is some one who can build a software from end-to-end\",\r\n    \"author\": \"MD\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8001/posts/f7bc7286-9860-4e6a-a703-a788fcd60ad6",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8001",
+					"path": [
+						"posts",
+						"f7bc7286-9860-4e6a-a703-a788fcd60ad6"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
